@@ -1,0 +1,24 @@
+package pr1;
+import java.util.Scanner;
+public class p3 {
+    public static void main (String[]args) {
+        Scanner sc = new Scanner(System.in); // создаёмобъект класса Scanner
+        int[] m = new int[10];
+        System.out.print("Введите 10 целых чисел: ");
+        for (int i = 0; i < 10; i++) {
+            if (sc.hasNextInt()) {/* hasNextInt()возвращает истинну если с потока вводаможно считать целое число*/
+                m[i] = sc.nextInt(); /* считывает целое число из потока ввода и сохраняет в массив*/
+            } else {
+                System.out.println("Вы ввели не целое число");
+            }
+        }
+        int sum = 0;
+        for (int i = 0; i < 10; i++) {
+            System.out.print(m[i] + " ");
+            sum=sum+m[i];
+        }
+        System.out.println();
+        System.out.println(sum);
+        System.out.println(sum / 10);
+    }
+}
